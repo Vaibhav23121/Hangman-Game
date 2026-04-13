@@ -21,9 +21,9 @@ function TextInputFormContainer() {
         event.preventDefault();
         console.log("form submitted",value);
         if(value){
-            setTimeout(() => {
-                navigate("/play");  
-            }, 5000);
+            //here i am givin query params after /play
+            navigate(`/play`,{state:{wordSelected: value}});  
+            
             //if we have some valid value then navigate to play game page
                   
         }
@@ -32,7 +32,7 @@ function TextInputFormContainer() {
     // these are boath Logiacal layer
     function handleTextInputChange(event) {
         console.log("text input changed");
-        console.log(event.target.value);
+        const val = console.log(event.target.value);
         setValue(event.target.value);
     }
     function handleShowHideClick(){

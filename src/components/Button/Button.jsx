@@ -14,7 +14,7 @@ import getButtonStyling from "./getButtonStyling";
 
 function Button({text, onClickHandler,styleType='primary',type="button"}){
     // dont have to use props ,desturcture it for what prop you want like texxt
-    // console.log(text); //prop is an object in which we return some values in key pair form 
+    // console.log(tex  t); //prop is an object in which we return some values in key pair form 
     return (
         <button
             onClick={onClickHandler}
