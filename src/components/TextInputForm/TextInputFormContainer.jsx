@@ -1,6 +1,8 @@
 
 import { useState } from "react";
 import TextInputForm from "./TextInputForm.jsx";
+import { useNavigate } from "react-router-dom";
+// import { PlayGame } from "../../pages/PlayGame.jsx";
 
 function TextInputFormContainer() {
     
@@ -10,15 +12,28 @@ function TextInputFormContainer() {
     const[inputType, setInputType] = useState("password");
     //setInputType is a updater function we alaways update inputType by USING setInputType FN.
 
+    const [value,setValue] =  useState("");
+    const navigate = useNavigate(); //is a hook that return a navigate function
+
     // let inputType="password";
     function handleFormSubmit(event){
-        // e means event
+        // event lsitenar
         event.preventDefault();
+        console.log("form submitted",value);
+        if(value){
+            setTimeout(() => {
+                navigate("/play");  
+            }, 5000);
+            //if we have some valid value then navigate to play game page
+                  
+        }
+    
     }
     // these are boath Logiacal layer
     function handleTextInputChange(event) {
-        console.log("text changed");
+        console.log("text input changed");
         console.log(event.target.value);
+        setValue(event.target.value);
     }
     function handleShowHideClick(){
         console.log("show/hide clicked");

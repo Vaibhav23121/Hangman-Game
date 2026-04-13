@@ -1,5 +1,9 @@
 // import './App.css';
+import { Routes, Route } from "react-router-dom";
 import TextInputFormContainer from './components/TextInputForm/TextInputFormContainer.jsx';
+import StartGame from './pages/StartGame.jsx';
+import PlayGame from './pages/PlayGame.jsx';
+
 
 
 
@@ -15,8 +19,10 @@ function App() {
       } /> */}
       
       
-      
-      <TextInputFormContainer/>
+      <Routes>
+        <Route path="/start" element={<StartGame/>} />
+        <Route path='/play' element={<PlayGame/>}/>
+      </Routes>
 
     </div>
   )

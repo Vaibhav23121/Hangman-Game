@@ -7,7 +7,7 @@ function TextInput({type="text", label,placeholder = "Enter your input here",onC
             className="px-4 py-2 border-gray-500 rounded-md w-full"
             placeholder={placeholder}
             // value={value}
-            onchange={onChangeHandler}
+            onChange={onChangeHandler}
             />
 
         </label>
