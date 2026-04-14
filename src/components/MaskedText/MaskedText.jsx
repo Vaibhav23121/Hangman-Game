@@ -1,12 +1,12 @@
 function MaskedText({ text, guessedLetters }) {
-  const maskedString = text.split("").map((letter) => {
+  const maskedString = text.toUpperCase().split("").map((letter) => {
     return guessedLetters.includes(letter) ? letter : "_";
   });
 
   return (
     <>
       {maskedString.map((letter, index) => (
-        <span key={index} className="mx-1">
+        <span key={index} className="mx-1 text-2xl">
           {letter}
         </span>
       ))}

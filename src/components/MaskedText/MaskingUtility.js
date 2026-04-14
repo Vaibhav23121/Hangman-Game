@@ -6,6 +6,7 @@
 
 
 export funtion getMaskedString(originalWorld,guessedLetters){
+    console.log("guessedletter",guessedLetters);
     guessedLetters = guessedLetters.map(letter=>letter.toUpperCase());//["h","E"."l"]
  
     const guessedLettetsSet = new Set(guessedLetters);//make the searching faster and optimise the code
