@@ -1,4 +1,5 @@
 function MaskedText({ text, guessedLetters }) {
+  
   const maskedString = text.toUpperCase().split("").map((letter) => {
     return guessedLetters.includes(letter) ? letter : "_";
   });
